@@ -11,7 +11,7 @@ public class Zadanie_14
     private static String hello()
     {
         Scanner joke = new Scanner(System.in);
-        String prov = "^[0-9]+[.]*[0-9]*$";
+        String prov = "^-*[0-9]+[.]*[0-9]*$";
         System.out.println("Введите число с клавиауры: ");
         String anek = joke.nextLine();
         if (anek.matches(prov))
