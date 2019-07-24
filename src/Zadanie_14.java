@@ -12,7 +12,7 @@ public class Zadanie_14
     {
         Scanner joke = new Scanner(System.in);
         String prov = "-*\\d+.*\\d+";
-        String prov_1 = "-*\\d";
+        String prov_1 = "-*\\d+";
         System.out.println("Введите число с клавиауры: ");
         String anek = joke.nextLine();
         if (anek.matches(prov_1))
