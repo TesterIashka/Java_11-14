@@ -11,11 +11,10 @@ public class Zadanie_14
     private static String hello()
     {
         Scanner joke = new Scanner(System.in);
-        String prov = "-*\\d+.*\\d+";
-        String prov_1 = "-*\\d+";
+        String prov = "^[0-9]+[.]*[0-9]*$";
         System.out.println("Введите число с клавиауры: ");
         String anek = joke.nextLine();
-        if (anek.matches(prov_1))
+        if (anek.matches(prov))
         {
             return anek;
         }
@@ -26,9 +25,16 @@ public class Zadanie_14
                 System.out.println("Вы ввели не число! Введите число:");
                 anek = joke.nextLine();
             }
-            String anek_1 = anek.substring(0, anek.indexOf("."));
-            return anek_1;
-            }
+                 if (anek.contains("."))
+                {
+                    String anek_1 = anek.substring(0, anek.indexOf("."));
+                    return anek_1;
+                }
+             else
+                {
+                    return anek;
+                }
+                       }
     }
     private static int hi(String A)
     {
